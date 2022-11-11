@@ -1,0 +1,89 @@
+.footer {
+  background: #131e2d;
+  color: white;
+
+  .footerContent {
+    max-width: 1440px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 7rem 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+
+    .footerLogo {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      .logo {
+        width: 10rem;
+      }
+      .footerText {
+        font-size: 0.8rem;
+      }
+    }
+
+    .footerLinks {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      justify-self: start;
+      justify-content: start;
+      align-items: flex-start;
+
+      .footerLinksTitle {
+        font-family: "Sora", sans-serif;
+        font-size: 1.1rem;
+        margin-bottom: 0.3rem;
+      }
+
+      .footerLink {
+        font-size: 0.9rem;
+        position: relative;
+        cursor: pointer;
+        display: inline;
+        justify-self: flex-start;
+        align-self: flex-start;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          transform: scaleX(0);
+          height: 2px;
+          bottom: -5px;
+          left: 0;
+          background-color: #ffc001;
+          transform-origin: bottom right;
+          transition: transform 0.25s ease-out;
+        }
+
+        &:hover::after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+      }
+    }
+  }
+
+  .footerBottom {
+    max-width: 1440px;
+    width: 85%;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .footerRights {
+      font-size: 0.8rem;
+    }
+    .footerIcons {
+      display: flex;
+      gap: 0.8rem;
+      .footerIcon {
+        width: 2rem;
+      }
+    }
+  }
+}

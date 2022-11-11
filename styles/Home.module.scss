@@ -1,0 +1,195 @@
+.container {
+  overflow-x: hidden;
+  .landingPage {
+    width: 100vw;
+    position: relative;
+    .heroSection {
+      width: 100vw;
+      display: flex;
+      .heroLeftSpace {
+        width: 45vw;
+      }
+      .heroSlide {
+        width: 55vw;
+
+        .swiper {
+          height: 80vh;
+          position: relative;
+
+          .swiperNavPrev,
+          .swiperNavNext {
+            position: absolute;
+            bottom: 1rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            z-index: 1;
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            background-position: center;
+            cursor: pointer;
+            transition: all 300ms ease;
+          }
+
+          .swiperNavPrev {
+            left: 1.2rem;
+            background-image: url("/left-arrow.png");
+
+            &:hover {
+              background-image: url("/left-arrow-hover.png");
+            }
+          }
+
+          .swiperNavNext {
+            left: 4.2rem;
+            background-image: url("/right-arrow.png");
+
+            &:hover {
+              background-image: url("/right-arrow-hover.png");
+            }
+          }
+
+          .swiperSlide {
+            .swiperSlideImage {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+
+    .heroTextSection {
+      position: absolute;
+      top: 13rem;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 1440px;
+      width: 85%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8rem;
+      align-items: flex-start;
+
+      .heroHeadline {
+        font-family: "Sora", sans-serif;
+        font-size: 3.5rem;
+        line-height: 1.2em;
+      }
+
+      .heroButton {
+        font-size: 1rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        position: relative;
+        cursor: pointer;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          transform: scaleX(0);
+          height: 2px;
+          bottom: -5px;
+          left: 0;
+          background-color: #131e2d;
+          transform-origin: bottom right;
+          transition: transform 0.25s ease-out;
+        }
+
+        &:hover::after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+
+        .heroButtonArrow {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #ffc001;
+        }
+      }
+    }
+
+    .productSection {
+      background-color: #efe2d1;
+      .productSectionContent {
+        max-width: 1440px;
+        width: 85%;
+        margin: 0 auto;
+        padding-top: 8rem;
+        padding-bottom: 4rem;
+
+        .productHeader {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 2rem;
+
+          .productTitle {
+            font-family: "Sora", sans-serif;
+            font-size: 2rem;
+          }
+
+          .productViewButton {
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1.5rem;
+            background: #e1d3c1;
+            border-radius: 10em;
+            cursor: pointer;
+            transition: background 300ms ease;
+
+            &:hover {
+              background: #ffc001;
+            }
+          }
+        }
+      }
+    }
+
+    .serviceSection {
+      background: #ffc001;
+      .services {
+        padding: 6rem 0;
+        max-width: 1440px;
+        width: 85%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .service {
+          display: flex;
+          gap: 1.5rem;
+          width: 75%;
+          margin: 0 auto;
+
+          .serviceImage {
+            height: 3rem;
+          }
+
+          .serviceInfo {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            width: 70%;
+
+            .serviceTitle {
+              font-family: "Sora", sans-serif;
+            }
+
+            .serviceContent {
+              font-size: 0.9rem;
+              line-height: 1.2em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

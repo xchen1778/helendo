@@ -1,0 +1,101 @@
+.swiper {
+  position: relative;
+  left: 0;
+  padding: 0;
+  padding-bottom: 8rem;
+
+  width: 100%;
+  .swiperNavPrev,
+  .swiperNavNext {
+    position: absolute;
+    top: 90%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    cursor: pointer;
+    transition: all 300ms ease;
+  }
+
+  .swiperNavPrev {
+    left: 0;
+    background-image: url("/slide-arrow-left.png");
+  }
+
+  .swiperNavNext {
+    right: 0;
+    background-image: url("/slide-arrow-right.png");
+  }
+  .swiperSlide {
+    .singleProduct {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .productImage {
+        cursor: pointer;
+      }
+
+      .productAction {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .productInfo {
+          display: flex;
+          flex-direction: column;
+          gap: 0.6rem;
+
+          .productName {
+            font-family: "Sora", sans-serif;
+            font-size: 1.3rem;
+            position: relative;
+            cursor: pointer;
+
+            &::after {
+              content: "";
+              position: absolute;
+              width: 100%;
+              transform: scaleX(0);
+              height: 2px;
+              bottom: -3px;
+              left: 0;
+              background-color: #131e2d;
+              transform-origin: bottom right;
+              transition: transform 0.25s ease-out;
+            }
+
+            &:hover::after {
+              transform: scaleX(1);
+              transform-origin: bottom left;
+            }
+          }
+
+          .productPrice {
+            font-size: 0.9rem;
+            color: #5e5e5e;
+          }
+        }
+        .productButton {
+          font-size: 1.5rem;
+          background: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 3rem;
+          height: 3rem;
+          border-radius: 10em;
+          cursor: pointer;
+          transition: background 300ms ease;
+
+          &:hover {
+            background: #ffc001;
+          }
+        }
+      }
+    }
+  }
+}
