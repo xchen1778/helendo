@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import Head from "next/head";
 import Nav from "../components/Nav/Nav";
 import styles from "../styles/Home.module.scss";

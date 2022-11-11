@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-helendo-dev-201823-authRole",
+      "UnauthRoleArn": "arn:aws:iam::321374402234:role/amplify-helendo-dev-201823-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::321374402234:role/amplify-helendo-dev-201823-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-helendo-dev-201823-deployment",
+      "UnauthRoleName": "amplify-helendo-dev-201823-unauthRole",
+      "StackName": "amplify-helendo-dev-201823",
+      "StackId": "arn:aws:cloudformation:us-east-1:321374402234:stack/amplify-helendo-dev-201823/bcf0ef40-615e-11ed-a126-0ea7ff4a7aa7",
+      "AmplifyAppId": "d3zrlx0rf730w"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d3zrlx0rf730w",
+          "type": "cicd"
+        }
+      }
+    }
+  }
+}
